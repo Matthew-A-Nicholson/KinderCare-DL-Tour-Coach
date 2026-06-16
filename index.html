@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#102E41">
+<title>D18 Tour Coach</title>
+<style>
+:root{
+  --navy:#102E41;--red:#DC3C3A;--red2:#B90000;--orange:#FF8C24;--orange2:#FF6113;
+  --blue:#64BEE6;--blue2:#3282D4;--gray:#F0EEEC;--gray2:#BEBEBE;--white:#fff;
+  --ink:#102E41;--muted:#536778;--shadow:0 14px 36px rgba(16,46,65,.14);--soft:0 7px 20px rgba(16,46,65,.09);
+  --r:26px; --safeBottom: env(safe-area-inset-bottom);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#fbfaf8 0%,#f7f3ef 48%,#fff 100%);color:var(--ink);font-size:17px;line-height:1.35;padding-bottom:92px} button,input,select,textarea{font-family:Arial,Helvetica,sans-serif} a{color:inherit}.app{max-width:920px;margin:0 auto}.hero{padding:calc(18px + env(safe-area-inset-top)) 20px 18px;text-align:center;background:radial-gradient(circle at 50% 0%,#fff 0%,#fbfaf8 55%,#f5eee7 100%);position:relative;overflow:hidden}.topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.hamb{width:42px;height:34px;border:0;background:transparent;position:relative}.hamb span,.hamb:before,.hamb:after{content:"";display:block;height:4px;background:var(--navy);border-radius:4px;margin:6px 0}.historyBtn{border:2px solid rgba(16,46,65,.12);background:#fff;border-radius:18px;padding:10px 14px;font-weight:900;color:var(--navy);box-shadow:var(--soft)}.wordmark{display:flex;align-items:center;justify-content:center;gap:12px;min-width:0}.tower{width:44px;height:44px;position:relative;flex:0 0 44px}.tower:before{content:"";position:absolute;left:7px;top:1px;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:22px solid var(--red)}.tower:after{content:"";position:absolute;left:9px;top:25px;width:26px;height:12px;border-radius:2px;background:var(--red);box-shadow:0 -7px 0 rgba(185,0,0,.22)}.brandText{text-align:left;font-weight:900;color:var(--navy);font-size:25px;letter-spacing:.2px;line-height:1}.brandText small{display:block;font-size:10px;letter-spacing:2px;margin-top:3px}.titleRow{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:4px}.line{height:3px;width:62px;background:var(--red);border-radius:4px}.hero h1{font-size:54px;line-height:.98;margin:4px 0 6px;font-weight:900;color:var(--navy);letter-spacing:-1px}.hero h1 span{font-size:28px;color:var(--red);letter-spacing:0}.mission{max-width:650px;margin:0 auto;color:var(--navy);font-size:19px;line-height:1.35}.mission strong{font-weight:900}.purpose{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:22px auto 0;max-width:780px;background:rgba(255,255,255,.68);border-radius:26px;box-shadow:var(--soft);border:1px solid rgba(16,46,65,.06);overflow:hidden}.purpose div{padding:14px 8px;border-right:1px solid rgba(16,46,65,.08)}.purpose div:last-child{border-right:0}.ico{width:34px;height:34px;margin:0 auto 6px;border:3px solid var(--red);border-radius:50%;display:grid;place-items:center;color:var(--red);font-weight:900}.purpose b{display:block;font-size:14px;line-height:1.1}.card{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);margin:18px 16px;padding:0;border:1px solid rgba(16,46,65,.06);overflow:hidden;scroll-margin-top:12px}.cardHead{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 18px;background:linear-gradient(135deg,var(--navy),#16445f);color:#fff}.cardHead.light{background:#fff;color:var(--navy);border-bottom:1px solid rgba(16,46,65,.08)}.headLeft{display:flex;align-items:center;gap:12px}.circleIcon{width:50px;height:50px;border-radius:18px;background:linear-gradient(135deg,var(--red),var(--orange2));display:grid;place-items:center;color:#fff;font-size:25px;font-weight:900;box-shadow:0 8px 18px rgba(220,60,58,.28)}h2{font-size:30px;margin:0;font-weight:900;letter-spacing:-.5px}.saveDraft{background:#fff;color:var(--navy);border:0;border-radius:999px;padding:10px 15px;font-weight:900}.content{padding:18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}label{display:block;font-weight:900;font-size:14px;margin:0 0 8px;color:var(--navy)}input,select,textarea{width:100%;font:inherit;color:var(--navy);padding:14px 15px;min-height:54px;border:2px solid #deddda;border-radius:14px;background:#fff;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--blue2);box-shadow:0 0 0 4px rgba(100,190,230,.18)}textarea{min-height:100px;resize:vertical}.sectionIntro{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}.scoreCount{background:#f4f5f6;border-radius:999px;padding:8px 12px;font-weight:900;color:var(--navy)}.viewAll{color:var(--red);font-weight:900;text-decoration:none}.cat{border-top:1px solid rgba(16,46,65,.09);padding:14px 0}.cat:first-of-type{border-top:0}.catHead{display:grid;grid-template-columns:54px 1fr auto;gap:12px;align-items:center}.catIcon{width:48px;height:48px;border-radius:50%;background:#fff6ed;display:grid;place-items:center;color:var(--red);font-size:24px;border:1px solid rgba(255,140,36,.18)}.catTitle{font-weight:900;font-size:19px}.catSub{font-size:14px;color:var(--muted);margin-top:2px}.dots{display:flex;gap:7px}.dot{width:22px;height:22px;border-radius:50%;border:2px solid #d7d9dc;background:#fff}.cat.open .catHead{margin-bottom:10px}.questions{display:none;padding-left:60px}.cat.open .questions{display:block}.q{padding:13px 0;border-top:1px dashed rgba(16,46,65,.13)}.sectionNotes{margin:14px 0 6px;padding:14px;border:1px solid rgba(16,46,65,.08);background:#fbfaf8;border-radius:18px}.sectionNotes label{font-size:15px}.sectionNotes textarea{min-height:86px;background:#fff}.noteHint{font-size:12px;color:var(--muted);margin-top:5px}.qtext{font-weight:800;margin:0 0 9px}.scale,.yn{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}.yn{grid-template-columns:repeat(3,1fr)}.scorebtn{border:2px solid #d7d9dc;background:#fff;color:var(--navy);border-radius:14px;min-height:42px;font-size:16px;font-weight:900}.scorebtn.selected{background:var(--navy);color:#fff;border-color:var(--navy)}.scorebtn.na.selected{background:var(--muted);border-color:var(--muted)}.summary{display:grid;grid-template-columns:1.1fr 1fr 1fr .95fr;gap:0;margin:18px 16px 96px;background:#fff;border:1px solid rgba(16,46,65,.09);box-shadow:var(--soft);border-radius:22px;overflow:hidden}.sumBox{padding:16px;text-align:center;border-right:1px solid rgba(16,46,65,.1)}.sumBox:last-child{border-right:0}.sumBox b{display:block;font-size:14px;margin-bottom:8px}.scoreBig{font-size:30px;font-weight:900;color:var(--red)}.sumSmall{color:var(--muted);font-size:13px}.calcTile{border:0;background:linear-gradient(135deg,var(--red),var(--orange2));color:#fff;font-weight:900;font-size:16px}.report{white-space:pre-wrap;background:#faf8f5;border:1px solid #eee6df;border-radius:18px;padding:15px;min-height:130px}.historyItem{border:1px solid #ebe5df;border-radius:16px;background:#fff;padding:12px;margin:10px 0}.dock{position:fixed;left:0;right:0;bottom:0;z-index:9;background:linear-gradient(135deg,var(--navy),#0c2636);display:grid;grid-template-columns:1fr 1fr 74px 1fr 1fr;gap:4px;align-items:center;padding:8px 12px calc(8px + var(--safeBottom));box-shadow:0 -12px 30px rgba(16,46,65,.24)}.dock a,.dock button{border:0;background:transparent;color:#fff;text-decoration:none;text-align:center;font-weight:900;font-size:12px;padding:6px 4px;border-radius:16px}.dock .glyph{display:block;font-size:22px;line-height:1;margin-bottom:3px}.dock .plus{width:60px;height:60px;margin:-30px auto 0;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--orange2));font-size:37px;line-height:58px;color:#fff;box-shadow:0 8px 22px rgba(220,60,58,.38)}.dock a.active{background:rgba(255,255,255,.1)}.miniActions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.miniActions button{border:0;border-radius:14px;background:var(--navy);color:#fff;font-weight:900;padding:12px 14px}.miniActions .orange{background:var(--orange);color:var(--navy)}.miniActions .light{background:#eee;color:var(--navy);border:1px solid #ccc}@media(max-width:720px){body{font-size:16px}.hero{padding-left:14px;padding-right:14px}.brandText{font-size:22px}.titleRow{gap:10px}.line{width:38px}.hero h1{font-size:42px}.hero h1 span{font-size:22px}.mission{font-size:17px}.purpose{grid-template-columns:repeat(4,1fr);margin-top:16px}.purpose div{padding:12px 4px}.ico{width:30px;height:30px;font-size:14px}.purpose b{font-size:12px}.grid{grid-template-columns:1fr}.card{margin:14px 10px;border-radius:22px}.cardHead{padding:14px}.circleIcon{width:44px;height:44px;border-radius:16px}h2{font-size:25px}.catHead{grid-template-columns:44px 1fr auto}.catIcon{width:40px;height:40px;font-size:20px}.catTitle{font-size:17px}.questions{padding-left:0}.dots{display:none}.scale{grid-template-columns:repeat(3,1fr)}.summary{grid-template-columns:1fr 1fr;margin-left:10px;margin-right:10px}.sumBox:nth-child(2){border-right:0}.calcTile{min-height:88px}.topbar{margin-bottom:10px}.historyBtn{padding:9px 11px}.cardHead .saveDraft{display:none}}
+
+.ratingBand{display:flex;gap:8px;flex-wrap:wrap;margin:14px 16px 0}.band{flex:1 1 120px;background:#fff;border:1px solid rgba(16,46,65,.08);border-radius:18px;padding:10px;text-align:center;box-shadow:var(--soft)}.band b{display:block;font-size:13px}.band span{font-size:12px;color:var(--muted)}.band.gold{border-color:rgba(255,140,36,.35)}.band.strong{border-color:rgba(100,190,230,.45)}.band.opp{border-color:rgba(255,140,36,.35)}.band.coach{border-color:rgba(220,60,58,.35)}
+.conversion{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.conversion button{border:2px solid #d7d9dc;background:#fff;color:var(--navy);border-radius:14px;min-height:50px;font-weight:900}.conversion button.selected{background:var(--navy);color:#fff;border-color:var(--navy)}.photoGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.photoInput{border:2px dashed #d8d2cc;border-radius:16px;padding:12px;background:#fbfaf8}.photoInput input{border:0;min-height:44px;padding:6px;background:transparent}.sectionRecap{border:1px solid #eee6df;background:#fff;border-radius:16px;padding:12px;margin:10px 0}.sectionRecap b{display:block;margin-bottom:6px}.leaderTable{width:100%;border-collapse:collapse}.leaderTable th,.leaderTable td{padding:10px;border-bottom:1px solid #eee6df;text-align:left}.leaderTable th{font-size:13px;color:var(--muted)}.rankPill{display:inline-block;border-radius:999px;padding:4px 8px;font-weight:900;background:#f4f5f6}.tinyBadges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.tinyBadges span{background:#fbfaf8;border:1px solid #eee6df;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:900;color:var(--navy)}
+@media(max-width:720px){.ratingBand{margin-left:10px;margin-right:10px}.photoGrid{grid-template-columns:1fr}.conversion{grid-template-columns:1fr}.conversion button{text-align:left;padding-left:14px}.summary{margin-bottom:36px}}
+
+@media print{.hero,.dock,.miniActions{display:none}body{padding:0;background:#fff}.card,.summary{box-shadow:none;border:1px solid #ddd;margin:12px}.questions{display:block}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="hero" id="dashboard">
+    <div class="topbar">
+      <button class="hamb" aria-label="Menu"><span></span></button>
+      <div class="wordmark" aria-label="KinderCare inspired brand area"><div class="tower" aria-hidden="true"></div><div class="brandText">KinderCare<small>LEARNING CENTERS</small></div></div>
+      <button class="historyBtn" onclick="location.hash='history'">↺ History</button>
+    </div>
+    <div class="titleRow"><div class="line"></div><h1>Tour Coach <span>3.0</span></h1><div class="line"></div></div>
+    <p class="mission"><strong>Every tour is an opportunity to change a family’s future.</strong><br>Families choose us when they feel seen, heard, welcomed, and confident. Use this tool to recognize excellence, coach growth, and help every center deliver a Gold Standard tour experience.</p>
+    <div class="purpose" aria-label="App purpose">
+      <div><span class="ico">◎</span><b>Score with<br>Confidence</b></div>
+      <div><span class="ico">★</span><b>Coach with<br>Purpose</b></div>
+      <div><span class="ico">↗</span><b>Improve<br>Every Day</b></div>
+      <div><span class="ico">♡</span><b>Impact More<br>Families</b></div>
+    </div>
+  </header>
+
+  <section class="card" id="audit">
+    <div class="cardHead"><div class="headLeft"><div class="circleIcon">▣</div><h2>New Audit</h2></div><button class="saveDraft" onclick="saveAudit(false)">♡ Save Draft</button></div>
+    <div class="content grid">
+      <div><label for="center">Center</label><select id="center"><option value="">Select Center</option><option>Arden Hills 000025</option><option>Brooklyn Center 000058</option><option>Fridley 000266</option><option>Brooklyn Park 000403</option><option>Robbinsdale 000633</option><option>Ramsey 000645</option><option>Blaine 300556</option><option>Mounds View 301011</option><option>Marketplace 301953</option><option>Armatage</option><option>Bunker Lake</option></select></div>
+      <div><label for="host">Tour Host</label><input id="host" placeholder="CD / AD / team member"></div>
+      <div><label for="auditor">Auditor</label><input id="auditor" value="Matthew"></div>
+      <div><label for="date">Date</label><input id="date" type="date"></div>
+      <div><label for="type">Mystery Shop Type</label><select id="type"><option>Scheduled</option><option>Same-day</option><option>Walk-in</option><option>Phone inquiry to tour</option></select></div>
+      <div><label for="age">Age Group Requested</label><select id="age"><option>Infant</option><option>Toddler</option><option>Discovery Preschool</option><option>Preschool</option><option>Pre-K</option><option>School Age</option><option>Multiple ages</option></select></div>
+    </div>
+  </section>
+
+  <section class="card" id="scorecard">
+    <div class="cardHead light"><div class="headLeft"><div class="circleIcon">☷</div><h2>Yes / No Audit</h2><span class="scoreCount" id="scoreCount">0 of 26 Scored</span></div><a href="#scorecard" class="viewAll" onclick="openAll();return false;">View All ›</a></div>
+    <div class="content" id="cats"></div>
+  </section>
+
+  <div class="ratingBand" aria-label="Score rating guide">
+    <div class="band gold"><b>🥇 Gold Standard</b><span>90–100</span></div>
+    <div class="band strong"><b>🥈 Strong Tour</b><span>80–89</span></div>
+    <div class="band opp"><b>🟡 Opportunity Zone</b><span>70–79</span></div>
+    <div class="band coach"><b>🔴 Immediate Coaching</b><span>Below 70</span></div>
+  </div>
+
+  <section class="summary" id="results">
+    <div class="sumBox"><b>Overall Score</b><div class="scoreBig" id="overallScore">--%</div><div class="sumSmall" id="scoreLabel">Not Calculated</div></div>
+    <div class="sumBox"><b>Gold Standard</b><div class="scoreBig">◎</div><div class="sumSmall">90% or higher</div></div>
+    <div class="sumBox"><b>Questions Scored</b><div class="scoreBig" id="scoredTiny">0 / 26</div><div class="sumSmall">Keep going</div></div>
+    <button class="calcTile" onclick="calculate(true)">▦<br>Calculate<br>Score</button>
+  </section>
+
+  <section class="card" id="evidence">
+    <div class="cardHead light"><div class="headLeft"><div class="circleIcon">◉</div><h2>Family Confidence Check</h2></div></div>
+    <div class="content grid">
+      <div>
+        <label>If you were the prospective family, how likely would you be to enroll?</label>
+        <div class="conversion" id="conversionBtns">
+          <button data-conversion="Definitely">Definitely</button>
+          <button data-conversion="Probably">Probably</button>
+          <button data-conversion="Maybe">Maybe</button>
+          <button data-conversion="Probably Not">Probably Not</button>
+          <button data-conversion="No">No</button>
+        </div>
+        <div class="noteHint">This helps compare the checklist score to the actual confidence the tour created.</div>
+      </div>
+      <div>
+        <label>Photo Evidence</label>
+        <div class="photoGrid">
+          <div class="photoInput"><label for="photoLobby">Welcome / lobby</label><input id="photoLobby" type="file" accept="image/*" capture="environment"></div>
+          <div class="photoInput"><label for="photoClassroom">Classroom / curriculum</label><input id="photoClassroom" type="file" accept="image/*" capture="environment"></div>
+        </div>
+        <div class="noteHint">Photos stay on the device/file input and are not included in exported CSV.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="feedback">
+    <div class="cardHead light"><div class="headLeft"><div class="circleIcon">✎</div><h2>Coaching Feedback</h2></div></div>
+    <div class="content grid">
+      <div><label for="wins">What went well?</label><textarea id="wins" placeholder="Specific wins observed..."></textarea></div>
+      <div><label for="opp">Biggest opportunity</label><textarea id="opp" placeholder="What behavior would most improve the next tour?"></textarea></div>
+      <div><label for="action">Required next step</label><textarea id="action" placeholder="Owner + action + due date..."></textarea></div>
+      <div><label>Generated Coaching Recap</label><div class="report" id="report">Tap Calculate Score to generate the coaching report.</div><div class="miniActions"><button onclick="sendEmail()" class="orange">Send Feedback</button><button onclick="saveAudit(true)">Save Audit</button><button onclick="window.print()" class="light">Print / PDF</button></div></div>
+    </div>
+  </section>
+
+  <section class="card" id="leaderboard">
+    <div class="cardHead light"><div class="headLeft"><div class="circleIcon">▥</div><h2>D18 Leaderboard</h2></div></div>
+    <div class="content"><p class="sumSmall">Average saved audit score by center on this device.</p><div id="leaderboardList"></div></div>
+  </section>
+
+  <section class="card" id="history">
+    <div class="cardHead light"><div class="headLeft"><div class="circleIcon">↺</div><h2>Saved Audits</h2></div></div>
+    <div class="content"><p class="sumSmall">Saved on this device only. Export CSV for district tracking.</p><div id="historyList"></div><div class="miniActions"><button onclick="exportCSV()">Export CSV</button><button class="light" onclick="clearHistory()">Clear History</button></div></div>
+  </section>
+</div>
+<nav class="dock" aria-label="Bottom navigation">
+  <a href="#dashboard" class="active"><span class="glyph">⌂</span>Home</a>
+  <a href="#scorecard"><span class="glyph">☷</span>Audit</a>
+  <button class="plus" onclick="location.hash='audit'">+</button>
+  <a href="#results"><span class="glyph">▥</span>Results</a>
+  <a href="#feedback"><span class="glyph">⚙</span>Coach</a>
+</nav>
+<script>
+const data=[
+ {cat:'Ready to Tour', icon:'♡', qs:[
+  ['Tour host was ready when the family arrived.','yn'],
+  ['Tour started promptly.','yn'],
+  ['Tour was confirmed ahead of time.','yn'],
+  ['Welcome sign or family welcome moment was visible.','yn'],
+  ['Tour packet/materials were prepared and customized.','yn'],
+  ['FamilyBuilder preparation was evident.','yn'],
+  ['Overall readiness created family confidence.','yn']
+ ]},
+ {cat:'Warm & Welcoming', icon:'☻', qs:[
+  ['Family was greeted immediately.','yn'],
+  ['Greeting felt warm, confident, and personal.','yn'],
+  ['Lobby was clean, organized, and family-ready.','yn'],
+  ['Staff acknowledged or welcomed the family.','yn'],
+  ['Teachers/classrooms appeared ready for visitors.','yn'],
+  ['Overall atmosphere felt inviting and reassuring.','yn']
+ ]},
+ {cat:'Discovery & Personalization', icon:'♙', qs:[
+  ['Host asked open-ended questions about the child and family.','yn'],
+  ['Host used the child or family name naturally.','yn'],
+  ['Host identified what mattered most to the family.','yn'],
+  ['Tour was customized to the family’s priorities.','yn'],
+  ['Host actively listened and adjusted the conversation.','yn'],
+  ['Family priorities were reflected in the close.','yn']
+ ]},
+ {cat:'Classroom Experience', icon:'⌂', qs:[
+  ['Classrooms were clean, organized, and tour-ready.','yn'],
+  ['Teachers were introduced to the family.','yn'],
+  ['Teacher introductions were meaningful and specific.','yn'],
+  ['Curriculum and visible learning were explained clearly.','yn'],
+  ['Communication tools were discussed.','yn'],
+  ['The classroom experience helped build confidence.','yn']
+ ]},
+ {cat:'Enrollment Confidence', icon:'☆', qs:[
+  ['Family questions were answered.','yn'],
+  ['Answers were clear, confident, and reassuring.','yn'],
+  ['Tuition/payment expectations were discussed.','yn'],
+  ['Benefits were connected to the family’s needs.','yn'],
+  ['Host recommended a clear next step.','yn'],
+  ['Host asked for enrollment or a commitment.','yn'],
+  ['Strategic promotion was used only when appropriate.','yn']
+ ]},
+ {cat:'Tour Score Drivers', icon:'↗', qs:[
+  ['Director/team member was ready to give the tour.','yn'],
+  ['Center staff was warm and welcoming.','yn'],
+  ['All questions were answered.','yn'],
+  ['It was easy to find a time to tour.','yn']
+ ]},
+ {cat:'Follow-Up', icon:'✓', qs:[
+  ['FamilyBuilder thank-you or next action was clear.','yn'],
+  ['Family was reminded to complete the post-tour survey.','yn'],
+  ['Tour was marked complete or next FamilyBuilder action was planned.','yn']
+ ]}
+];
+let totalQuestions=data.reduce((a,c)=>a+c.qs.length,0);
+let conversionChoice='';
+const greatLooks={
+ 'Welcome sign or family welcome moment was visible.':'Create a visible family welcome moment before arrival so the family feels expected, not processed.',
+ 'Tour packet/materials were prepared and customized.':'Prepare a customized tour packet with inserts that match the family’s age group, needs, and timing.',
+ 'Tour was confirmed ahead of time.':'Call to confirm the tour 24 hours ahead and reinforce that the center is excited to meet the family.',
+ 'FamilyBuilder preparation was evident.':'Review FamilyBuilder notes before the tour and use family details to personalize the visit.',
+ 'Family was greeted immediately.':'Greet the family right away with warmth, eye contact, and the child/family name when known.',
+ 'Staff acknowledged or welcomed the family.':'Set the expectation that every team member helps create family feel when visitors are present.',
+ 'Host asked open-ended questions about the child and family.':'Start with discovery questions before presenting features so the tour is shaped around what matters most to the family.',
+ 'Tour was customized to the family’s priorities.':'Connect each stop on the tour to the family’s stated needs instead of giving a one-size-fits-all walkthrough.',
+ 'Teachers were introduced to the family.':'Introduce every teacher visited and highlight one specific strength that would matter to that family.',
+ 'Curriculum and visible learning were explained clearly.':'Point to visible curriculum evidence and explain what children are learning in simple, parent-friendly language.',
+ 'Communication tools were discussed.':'Explain how families receive updates through the app, joyful notes, and conferences.',
+ 'Tuition/payment expectations were discussed.':'Share tuition/payment expectations confidently and connect the investment to care, curriculum, and confidence.',
+ 'Host recommended a clear next step.':'End the tour with a specific recommended next step instead of “let me know.”',
+ 'Host asked for enrollment or a commitment.':'Before ending, confidently ask for enrollment or help the family secure the next commitment.',
+ 'Strategic promotion was used only when appropriate.':'Use promotions to support a decision, not to sell a deal, and always bring it back to the child’s experience.',
+ 'Family was reminded to complete the post-tour survey.':'At the end of the tour, let the family know a quick survey is coming and their feedback helps us improve.'
+};
+function scoreButtons(type){return `<div class="yn"><button class="scorebtn" data-score="5">Yes</button><button class="scorebtn" data-score="1">No</button><button class="scorebtn na" data-score="na">N/A</button></div>`}
+function renderCats(){let html='';data.forEach((c,ci)=>{html+=`<div class="cat ${ci===0?'open':''}" data-cat="${c.cat}"><div class="catHead" onclick="toggleCat(this)"><div class="catIcon">${c.icon}</div><div><div class="catTitle"><span style="display:inline-grid;place-items:center;background:var(--red);color:#fff;border-radius:50%;width:24px;height:24px;font-size:13px;margin-right:8px">${ci+1}</span>${c.cat}</div><div class="catSub">${c.qs.length} Questions</div></div><div class="dots">${'<span class="dot"></span>'.repeat(Math.min(c.qs.length,5))}</div></div><div class="questions">`;c.qs.forEach((q,qi)=>{html+=`<div class="q" data-cat="${c.cat}"><div class="qtext">${q[0]}</div>${scoreButtons('yn')}</div>`});html+=`<div class="sectionNotes"><label for="note-${ci}">${c.cat} notes</label><textarea id="note-${ci}" data-note-cat="${c.cat}" placeholder="What did you observe? Capture specific wins, misses, quotes, or coaching context..."></textarea><div class="noteHint">Used in the generated coaching recap.</div></div>`;html+='</div></div>'});document.getElementById('cats').innerHTML=html;document.getElementById('scoreCount').innerText=`0 of ${totalQuestions} Scored`;document.getElementById('scoredTiny').innerText=`0 / ${totalQuestions}`}
+function toggleCat(el){el.closest('.cat').classList.toggle('open')}
+function openAll(){document.querySelectorAll('.cat').forEach(c=>c.classList.add('open'))}
+function val(id){return (document.getElementById(id)||{}).value||''}
+function getScores(){let qs=document.querySelectorAll('.q'), rows=[], sums={}, scored=0;qs.forEach(q=>{let sel=q.querySelector('.scorebtn.selected'), cat=q.dataset.cat, text=q.querySelector('.qtext').innerText, score=sel?sel.dataset.score:'';if(score)scored++;rows.push({cat,text,score});if(score && score!='na'){sums[cat]??={sum:0,count:0};sums[cat].sum+=Number(score);sums[cat].count++}});return {rows,sums,scored}}
+function pct(avg){return Math.round((avg/5)*100)}
+function getNotes(){let notes={};document.querySelectorAll('[data-note-cat]').forEach(t=>{if(t.value.trim())notes[t.dataset.noteCat]=t.value.trim()});return notes}
+function bandLabel(score){if(score>=90)return 'Gold Standard'; if(score>=80)return 'Strong Tour'; if(score>=70)return 'Opportunity Zone'; if(score>0)return 'Immediate Coaching Needed'; return 'Not Calculated'}
+function calculate(go){let d=getScores(), total=0,count=0,catPct={},missesByCat={},yesByCat={};d.rows.forEach(r=>{if(r.score==='1'){(missesByCat[r.cat]??=[]).push(r.text)} if(r.score==='5'){(yesByCat[r.cat]??=[]).push(r.text)}});for(let c in d.sums){let avg=d.sums[c].sum/d.sums[c].count;catPct[c]=pct(avg);total+=d.sums[c].sum;count+=d.sums[c].count}let overall=count?pct(total/count):0;let label=bandLabel(overall);document.getElementById('overallScore').innerText=count?overall+'%':'--%';document.getElementById('scoreLabel').innerText=label;document.getElementById('scoreCount').innerText=`${d.scored} of ${totalQuestions} Scored`;document.getElementById('scoredTiny').innerText=`${d.scored} / ${totalQuestions}`;let lowCat='',low=999,highCat='',high=-1;for(let k in catPct){if(catPct[k]<low){low=catPct[k];lowCat=k}if(catPct[k]>high){high=catPct[k];highCat=k}}let notes=getNotes();let sectionRecaps='';data.forEach(c=>{let cp=catPct[c.cat];let missed=(missesByCat[c.cat]||[]);let yn=(yesByCat[c.cat]||[]);let note=notes[c.cat]||'';let strength=yn.length?yn[0]:'No clear strength captured yet.';let opp=missed.length?missed[0]:'No missed item captured yet.';sectionRecaps+=`
+
+${c.cat}${cp!==undefined?' - '+cp+'%':''}
+Strength: ${strength}
+Opportunity: ${opp}${note?'\nShopper Notes: '+note:''}`});let suggestions=[];Object.values(missesByCat).flat().slice(0,6).forEach(m=>suggestions.push(greatLooks[m]||('Practice: '+m)));let conversion=conversionChoice||'Not selected';let confidenceNote='';if(count && ['Maybe','Probably Not','No'].includes(conversion) && overall>=80){confidenceNote='\n\nConfidence Watchout: The checklist score is strong, but the family-confidence predictor is lower. Coach the close, emotional connection, and next-step recommendation.'}let report=`D18 Tour Coach Report
+
+Center: ${val('center')||'Not selected'}
+Tour Host: ${val('host')||'Not listed'}
+Auditor: ${val('auditor')}
+Date: ${val('date')}
+Overall Score: ${count?overall+'%':'Not calculated'} - ${label}
+Family Confidence Predictor: ${conversion}${confidenceNote}
+
+Overall Strength:
+${val('wins')||('Strongest category: '+(highCat||'Not enough scores yet')+'.')}
+
+Biggest Opportunity:
+${val('opp')||('Focus category: '+(lowCat||'Not enough scores yet')+'.')}
+
+Required Next Step:
+${val('action')||'Choose one high-impact tour behavior to practice before the next scheduled tour, then observe again within two weeks.'}
+
+Section-Based Coaching:${sectionRecaps}
+
+What Great Looks Like:
+${suggestions.length?suggestions.map(x=>'• '+x).join('\n'):'• Complete more questions marked No to generate targeted coaching moves.'}
+
+Category Scores:`;for(let x in catPct){report+=`
+- ${x}: ${catPct[x]}%`}document.getElementById('report').innerText=report;if(go)location.hash='results';return {overall,label,catPct,report,rows:d.rows,scored:d.scored,conversion}}
+function saveAudit(show=true){let r=calculate(false);let list=JSON.parse(localStorage.getItem('tourCoachAudits')||'[]');list.unshift({saved:new Date().toLocaleString(),center:val('center')||'No Center',host:val('host'),date:val('date'),score:r.overall,label:r.label,report:r.report,scored:r.scored,conversion:r.conversion});localStorage.setItem('tourCoachAudits',JSON.stringify(list));renderHistory();renderLeaderboard();if(show)alert('Saved. Audit captured.')}
+function renderHistory(){let list=JSON.parse(localStorage.getItem('tourCoachAudits')||'[]'), box=document.getElementById('historyList');if(!list.length){box.innerHTML='<p class="sumSmall">No saved audits yet.</p>';return}box.innerHTML=list.map(a=>`<div class="historyItem"><strong>${a.center} - ${a.score}% ${a.label}</strong><br><span class="sumSmall">${a.date} | ${a.host||'No host'} | ${a.scored||0} scored | Confidence: ${a.conversion||'Not selected'} | saved ${a.saved}</span></div>`).join('')}
+function renderLeaderboard(){let list=JSON.parse(localStorage.getItem('tourCoachAudits')||'[]'), box=document.getElementById('leaderboardList');if(!box)return;if(!list.length){box.innerHTML='<p class="sumSmall">No saved audits yet. Save an audit to start the leaderboard.</p>';return}let grouped={};list.forEach(a=>{if(!a.score)return;grouped[a.center]??={sum:0,count:0,best:0};grouped[a.center].sum+=Number(a.score);grouped[a.center].count++;grouped[a.center].best=Math.max(grouped[a.center].best,Number(a.score))});let rows=Object.entries(grouped).map(([center,v])=>({center,avg:Math.round(v.sum/v.count),count:v.count,best:v.best})).sort((a,b)=>b.avg-a.avg);box.innerHTML='<table class="leaderTable"><thead><tr><th>Rank</th><th>Center</th><th>Avg</th><th>Audits</th></tr></thead><tbody>'+rows.map((r,i)=>`<tr><td><span class="rankPill">${i+1}</span></td><td>${r.center}<div class="sumSmall">Best: ${r.best}%</div></td><td><strong>${r.avg}%</strong><div class="sumSmall">${bandLabel(r.avg)}</div></td><td>${r.count}</td></tr>`).join('')+'</tbody></table>'}
+function sendEmail(){let r=calculate(false);location.href='mailto:?subject='+encodeURIComponent('Tour Coach Feedback: '+(val('center')||'Center')+' - '+(r.overall||0)+'%')+'&body='+encodeURIComponent(r.report)}
+function exportCSV(){let list=JSON.parse(localStorage.getItem('tourCoachAudits')||'[]');let csv='Saved,Center,Host,Date,Score,Rating,Questions Scored\n';list.forEach(a=>{csv+=`"${a.saved}","${a.center}","${a.host}","${a.date}","${a.score}","${a.label}","${a.scored||0}"\n`});let blob=new Blob([csv],{type:'text/csv'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='tour-coach-audits.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function clearHistory(){if(confirm('Clear saved audits on this device?')){localStorage.removeItem('tourCoachAudits');renderHistory()}}
+document.addEventListener('click',e=>{if(e.target.closest('#conversionBtns button')){document.querySelectorAll('#conversionBtns button').forEach(b=>b.classList.remove('selected'));e.target.classList.add('selected');conversionChoice=e.target.dataset.conversion;calculate(false)}if(e.target.classList.contains('scorebtn')){let q=e.target.closest('.q');q.querySelectorAll('.scorebtn').forEach(b=>b.classList.remove('selected'));e.target.classList.add('selected');calculate(false)}});
+(function(){let d=document.getElementById('date');if(d&&!d.value)d.value=new Date().toISOString().slice(0,10);renderCats();renderHistory();renderLeaderboard();calculate(false)})();
+</script>
+</body>
+</html>
